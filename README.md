@@ -54,5 +54,5 @@ Projekt "Problemy płaszczaków" był wyzwaniem, które wymagało zastosowania r
 
 Dominik Kuźmiński rozwiązał problem otoczki wypukłej za pomocą algorytmu Grahama.
 Michał Wiśniewski zastosował algorytm Boyera-Moore'a do wyszukiwania wzorców oraz algorytm Huffmana do kompresji danych.
-Michał Suszek opracował naiwną metodę patrolowania płotu.
+Michał Suszek opracował metodę patrolowania płotu.
 Praca zespołowa i interdyscyplinarne podejście umożliwiły skuteczne rozwiązanie wszystkich problemów, z jakimi zespół się zetknął.
