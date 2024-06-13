@@ -1,4 +1,5 @@
-Problemy płaszczaków
+Tytuł:Problemy płaszczaków
+
 Twórcy projektu:
 Michał Wiśniewski
 Dominik Kuźmiński
