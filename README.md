@@ -3,7 +3,9 @@ Twórcy projektu:
 Michał Wiśniewski
 Dominik Kuźmiński
 Michał Suszek
-Nikodem Kaliński\n
+Nikodem Kaliński
+
+
 Spis treści
 Wprowadzenie
 Problemy i ich rozwiązania
