@@ -18,6 +18,7 @@ Wprowadzenie
 Projekt "Problemy płaszczaków" został stworzony przez zespół składający się z Michała Wiśniewskiego, Dominika Kuźmińskiego, Michała Suszka i Nikodema Kalińskiego. Celem projektu było rozwiązanie trzech złożonych problemów algorytmicznych, z którymi twórcy się zetknęli podczas prac nad różnymi aspektami informatyki.
 
 Problemy i ich rozwiązania
+
 Problem nr 1
 Osoba odpowiedzialna: Dominik Kuźmiński
 
