@@ -1,4 +1,4 @@
-Tytuł:Problemy płaszczaków
+Problemy płaszczaków
 
 Twórcy projektu:
 Michał Wiśniewski
