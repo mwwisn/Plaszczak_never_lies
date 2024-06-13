@@ -51,7 +51,7 @@ Opis problemu: Pan Michał Suszek napotkał problem związany z optymalnym patro
 
 Rozwiązanie: Pan Michał użył do tego rozwiązania naiwnego, które polega na sekwencyjnym przechodzeniu wzdłuż płotu i wykonywaniu patrolu.
 
-Rozwiązanie naiwne:
+Rozwiązanie patrolowania płotu:
 Opis: W najprostszym podejściu, patrolowanie odbywa się poprzez liniowe przechodzenie od jednego końca płotu do drugiego, co jest łatwe do zaimplementowania, ale niekoniecznie optymalne pod względem czasu czy zasobów.
 Podsumowanie
 Projekt "Problemy płaszczaków" był wyzwaniem, które wymagało zastosowania różnych algorytmów do rozwiązania złożonych problemów. Każdy z członków zespołu wniósł swoją unikalną wiedzę i umiejętności, co pozwoliło na efektywne rozwiązanie napotkanych problemów.
