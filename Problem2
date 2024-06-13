@@ -1,1 +1,189 @@
+#include <iostream>
+#include <string>
+#include <queue>
+#include <unordered_map>
+#include<fstream>
+using namespace std;
 
+// Struktura węzła drzewa Huffmana
+struct HuffmanNode {
+    char data;
+    int frequency;
+    HuffmanNode *left, *right;
+
+    HuffmanNode(char data, int frequency) : data(data), frequency(frequency), left(nullptr), right(nullptr) {}
+};
+
+// Funkcja porównująca dla kolejki priorytetowej węzłów drzewa Huffmana
+struct Compare {
+    bool operator()(HuffmanNode* left, HuffmanNode* right) {
+        if (left->frequency == right->frequency) {
+            return left->data > right->data;
+        }
+        return left->frequency > right->frequency;
+    }
+};
+
+// Funkcja tworząca drzewo Huffmana i zwracająca korzeń
+HuffmanNode* buildHuffmanTree(const unordered_map<char, int>& frequencyMap) {
+    priority_queue<HuffmanNode*, vector<HuffmanNode*>, Compare> minHeap;
+
+    // Tworzenie węzłów liści
+    for (const auto& pair : frequencyMap) {
+        minHeap.push(new HuffmanNode(pair.first, pair.second));
+    }
+
+    // Budowanie drzewa Huffmana
+    while (minHeap.size() > 1) {
+        HuffmanNode* left = minHeap.top();
+        minHeap.pop();
+
+        HuffmanNode* right = minHeap.top();
+        minHeap.pop();
+
+        // Tworzenie węzła rodzica
+        HuffmanNode* parent = new HuffmanNode('\0', left->frequency + right->frequency);
+        parent->left = left;
+        parent->right = right;
+
+        minHeap.push(parent);
+    }
+
+    // Zwracanie korzenia drzewa
+    return minHeap.top();
+}
+
+// Funkcja kodująca tekst używając drzewa Huffmana
+string encode(HuffmanNode* root, string str, unordered_map<char, string>& huffmanCode) {
+    if (root == nullptr)
+        return "";
+
+    // Jeśli węzeł jest liściem
+    if (!root->left && !root->right) {
+        huffmanCode[root->data] = str;
+        return str;
+    }
+
+    // Rekurencyjnie koduj lewe i prawe poddrzewo
+    string leftCode = encode(root->left, str + "0", huffmanCode);
+    string rightCode = encode(root->right, str + "1", huffmanCode);
+    return leftCode + rightCode;
+}
+
+// Funkcja kodująca tekst używając kodów Huffmana
+string huffmanEncode(const string& opowiesc, const unordered_map<char, string>& huffmanCode) {
+    string zakodowanaopowiesc = "";
+    for (char c : opowiesc) {
+        zakodowanaopowiesc += huffmanCode.at(c);
+    }
+    return zakodowanaopowiesc;
+}
+// Funkcja wypisująca strukturę drzewa Huffmana
+void printHuffmanTree(HuffmanNode* root, int depth = 0) {
+    if (root == nullptr)
+        return;
+
+    // Wypisanie węzła
+    for (int i = 0; i < depth; ++i)
+        cout << "    "; // Ustawienie wcięcia w zależności od głębokości w drzewie
+    cout << root->data << " (" << root->frequency << ")" << endl; // Wypisanie danych węzła
+
+    // Rekurencyjne wypisanie lewego i prawego poddrzewa
+    printHuffmanTree(root->left, depth + 1);
+    printHuffmanTree(root->right, depth + 1);
+}
+
+//implementacja algorytmu Boyera-Mora do przeszukiwanaia tekstu
+void last_fill(string wzorzec, char litera[], int liczba[]) {
+    int n = wzorzec.length();
+    for (int i = 0; i < n; i++) {
+        char kandydat = wzorzec[i];
+        for (int j = 0; j < 26; j++) {
+            if (litera[j] == kandydat && liczba[j] < i) {
+                liczba[j] = i;
+            }
+        }
+    }
+}
+
+int main() {
+    // Deklaracja alfabetu plaszczakow
+    char litera[26];
+    int liczba[26];
+    for (int i = 0; i < 26; i++)
+        litera[i] = 65 + i;
+    for (int i = 0; i < 26; i++)
+        liczba[i] = -1;
+
+    string wzorzec;
+    string opowiesc = "";
+    cout << "PODAJ WZORZEC DO ZMIANY! ";
+    cin >> wzorzec;
+    cout << endl;
+    char do_zmiany, zamienna;
+    cout << "Podaj literke ktora ma byc zamieniona i na jaka ma byc zmieniona w wzorcu: ";
+    cin >> do_zmiany >> zamienna;
+    // Wczytanie danych z wprowadzonego przez użytkownika ciągu znaków
+    cout << "Podaj opowiesc, w ktorym chcesz dokonac zmiany (zakończ wprowadzanie wpisując 'koniec'): " << endl;
+    getline(cin, opowiesc);
+    string line;
+    while (getline(cin, line) && line != "koniec") {
+        opowiesc += line;//dodawanie nowej lini do momentu wpisania koniec
+    }
+    last_fill(wzorzec, litera, liczba);
+    int dlugosc_przeszukiwanego = opowiesc.length();
+    int dlugosc_wzorca = wzorzec.length();
+    int i = 0;
+    while (i <= dlugosc_przeszukiwanego - dlugosc_wzorca) {
+        int j = dlugosc_wzorca - 1;
+        while (j >= 0 && opowiesc[i + j] == wzorzec[j])
+            j--;
+        if (j < 0) {
+            for (int k = i; k < i + dlugosc_wzorca; k++) {
+                if (opowiesc[k] == do_zmiany) {
+                    opowiesc[k] = zamienna;
+                }
+            }
+            i += dlugosc_wzorca;
+        } else {
+            i += max(1, j - liczba[opowiesc[i + j] - 65]);
+        }
+    }
+
+    unordered_map<char, int> frequencyMap;
+
+    // Liczenie częstości występowania liter
+    for (char c : opowiesc) {
+        frequencyMap[c]++;
+    }
+
+    // Tworzenie drzewa Huffmana
+    HuffmanNode* root = buildHuffmanTree(frequencyMap);
+
+    // Tworzenie kodów Huffmana dla liter
+    unordered_map<char, string> huffmanCode;
+    encode(root, "", huffmanCode);
+
+    // Kodowanie tekstu
+    string zakodowanaopowiesc = huffmanEncode(opowiesc, huffmanCode);
+    // Wypisanie struktury drzewa Huffmana
+    cout << "Struktura drzewa Huffmana:" << endl;
+    printHuffmanTree(root);
+
+    // Wypisywanie zakodowanego tekstu
+    cout << "Zakodowane słowo: " << zakodowanaopowiesc << endl;
+        ofstream outputFile("zakodowany_tekst.bin",ios::binary); // Otwarcie pliku w trybie binarnym
+
+    if (outputFile.is_open()) { // Sprawdzenie, czy udało się otworzyć plik
+        // Konwertujemy zakodowany tekst na postać binarną i zapisujemy do pliku
+        for (char c : zakodowanaopowiesc) {
+            int d = c - 48;
+            outputFile.write(reinterpret_cast<char*>(&d), sizeof(bool));
+        }
+        outputFile.close(); // Zamknięcie pliku
+        cout << "Zakodowany tekst został zapisany do pliku binarnego." << endl;
+    } else {
+        cout << "Błąd podczas otwierania pliku do zapisu." << endl;
+    }
+    return 0;
+}
