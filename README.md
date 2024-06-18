@@ -152,7 +152,7 @@ Ilosc zuzytych Kijkow: 38
 
 problem2![obraz](https://github.com/mwwisn/Plaszczak_never_lies/assets/158228165/2d9f65c6-e8ac-4b1f-a102-abb4be2b069a)
 
-Dominik Kuźmiński rozwiązał problem otoczki wypukłej za pomocą algorytmu Jarvisa.
+Dominik Kuźmiński rozwiązał problem otoczki wypukłej za pomocą algorytmu Jarvisa, problem najkrótszych ścieżek za pomocą algorytmu Dikstry, problem dobierania w pary za pomocą algorytmu Hopcrofta-Karpa, problem cięcia kijków za pomocą algoytmu pakowania plecaka.
 Michał Wiśniewski zastosował algorytm Boyera-Moore'a do wyszukiwania wzorców oraz algorytm Huffmana do kompresji danych.
 Michał Suszek opracował metodę patrolowania płotu.
 Praca zespołowa i interdyscyplinarne podejście umożliwiły skuteczne rozwiązanie wszystkich problemów, z jakimi zespół się zetknął.
