@@ -56,6 +56,9 @@ Opis: W najprostszym podejściu, patrolowanie odbywa się poprzez liniowe przech
 Podsumowanie
 Projekt "Problemy płaszczaków" był wyzwaniem, które wymagało zastosowania różnych algorytmów do rozwiązania złożonych problemów. Każdy z członków zespołu wniósł swoją unikalną wiedzę i umiejętności, co pozwoliło na efektywne rozwiązanie napotkanych problemów.
 
+testy::
+problem2![obraz](https://github.com/mwwisn/Plaszczak_never_lies/assets/158228165/2d9f65c6-e8ac-4b1f-a102-abb4be2b069a)
+
 Dominik Kuźmiński rozwiązał problem otoczki wypukłej za pomocą algorytmu Grahama.
 Michał Wiśniewski zastosował algorytm Boyera-Moore'a do wyszukiwania wzorców oraz algorytm Huffmana do kompresji danych.
 Michał Suszek opracował metodę patrolowania płotu.
