@@ -60,6 +60,7 @@ testy::
 
 
 problem 1 Dane wejściowe:
+
 Podaj liczbe punktow orientacyjnych oraz ilosc sciezek:
 11 16
 
