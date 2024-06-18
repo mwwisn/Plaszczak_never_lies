@@ -22,13 +22,28 @@ Problemy i ich rozwiązania
 Problem nr 1
 Osoba odpowiedzialna: Dominik Kuźmiński
 
-Opis problemu: Podczas pracy nad projektem, pan Dominik natknął się na problem związany ze znalezieniem otoczki wypukłej.
+Podproblemy:
+1. Znalezienie otoczki wypukłej
+2. Znalezienie nakrótszych ścieżek
+3. Dobranie płaszczaków w pary
+4. Cięcie kijków
 
-Rozwiązanie: Do rozwiązania tego problemu, pan Dominik użył algorytmu Jarvisa, który pozwala na efektywne znalezienie otoczki wypukłej zbioru punktów w czasie O(n log n).
+Opis podproblemu 1: Znalezieniem otoczki wypukłej.
+Rozwiązanie: Do rozwiązania użyłem algorytmu Jarvisa, który pozwala na efektywne znalezienie otoczki wypukłej zbioru punktów.
+Złożoność czasowa: O(nh), gdzie n to liczba punktów, a h to liczba punktów na otoczce wypukłej.
 
-Algorytm Jarvisa:
-Sortowanie: Najpierw punkty są sortowane według kąta, jaki tworzą z punktem startowym (najczęściej o najmniejszej współrzędnej y).
-Budowanie otoczki: Następnie iteracyjnie dodaje się punkty do otoczki, usuwając te, które powodują wklęsłość.
+Opis podproblemu 2: Znalezienie nakrótszych ścieżek.
+Rozwiązanie: Do rozwiązania użyłem algorytmu Dikstry, którego użyłem żeby znaleźć najkrótsze ścieżki od fabryki do każdego z punktów.
+Złożoność czasowa: O((V+E)logV), gdzie V to liczba wierzchołków, a E to liczba krawędzi.
+
+Opis podproblemu 3: Dobranie płaszczaków w pary.
+Rozwiązanie: Jako że płaszczaki mają recę albo z tyłu albo z przodu można je łatwo podzielić na dwie grupy dzięki czemu mogłem wykorzystać algorytm Hopcrofta-Karpa.
+Złożoność czasowa: O(sqrt(V)E), gdzie V to liczba wierzchołków w grafie, a E to liczba krawędzi.
+
+Opis podproblemu 4: Cięcie kijków.
+Rozwiązani: Do rozwiązania użyłem zachłannego problemu plecakowego gdzie podczas cięcia kijka tniemy najwięcej ile możemy aż do momentu gdy z naszego kija nie można zrobić mniejszych.
+Złożoność czasowa: W najgorszym przypadku (pow(n, 2)) gdzie n to liczba kijków. Sortowanie ma złożoność O(n log n), a główna pętla może mieć złożoność (pow(n, 2)).
+
 Problem nr 2
 Osoba odpowiedzialna: Michał Wiśniewski
 
