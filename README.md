@@ -29,15 +29,21 @@ Podproblemy:
 4. Cięcie kijków
 
 Opis podproblemu 1: Znalezieniem otoczki wypukłej.
+
 Rozwiązanie: Do rozwiązania użyłem algorytmu Jarvisa, który pozwala na efektywne znalezienie otoczki wypukłej zbioru punktów.
+
 Złożoność czasowa: O(nh), gdzie n to liczba punktów, a h to liczba punktów na otoczce wypukłej.
 
 Opis podproblemu 2: Znalezienie nakrótszych ścieżek.
+
 Rozwiązanie: Do rozwiązania użyłem algorytmu Dikstry, którego użyłem żeby znaleźć najkrótsze ścieżki od fabryki do każdego z punktów.
+
 Złożoność czasowa: O((V+E)logV), gdzie V to liczba wierzchołków, a E to liczba krawędzi.
 
 Opis podproblemu 3: Dobranie płaszczaków w pary.
+
 Rozwiązanie: Jako że płaszczaki mają recę albo z tyłu albo z przodu można je łatwo podzielić na dwie grupy dzięki czemu mogłem wykorzystać algorytm Hopcrofta-Karpa.
+
 Złożoność czasowa: O(sqrt(V)E), gdzie V to liczba wierzchołków w grafie, a E to liczba krawędzi.
 
 Opis podproblemu 4: Cięcie kijków.
