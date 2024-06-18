@@ -24,7 +24,7 @@ Osoba odpowiedzialna: Dominik Kuźmiński
 
 Opis problemu: Podczas pracy nad projektem, pan Dominik natknął się na problem związany ze znalezieniem otoczki wypukłej.
 
-Rozwiązanie: Do rozwiązania tego problemu, pan Dominik użył algorytmu Grahama, który pozwala na efektywne znalezienie otoczki wypukłej zbioru punktów w czasie O(n log n).
+Rozwiązanie: Do rozwiązania tego problemu, pan Dominik użył algorytmu Jarvisa, który pozwala na efektywne znalezienie otoczki wypukłej zbioru punktów w czasie O(n log n).
 
 Algorytm Grahama:
 Sortowanie: Najpierw punkty są sortowane według kąta, jaki tworzą z punktem startowym (najczęściej o najmniejszej współrzędnej y).
@@ -59,7 +59,7 @@ Projekt "Problemy płaszczaków" był wyzwaniem, które wymagało zastosowania r
 testy::
 problem2![obraz](https://github.com/mwwisn/Plaszczak_never_lies/assets/158228165/2d9f65c6-e8ac-4b1f-a102-abb4be2b069a)
 
-Dominik Kuźmiński rozwiązał problem otoczki wypukłej za pomocą algorytmu Grahama.
+Dominik Kuźmiński rozwiązał problem otoczki wypukłej za pomocą algorytmu Jarvisa.
 Michał Wiśniewski zastosował algorytm Boyera-Moore'a do wyszukiwania wzorców oraz algorytm Huffmana do kompresji danych.
 Michał Suszek opracował metodę patrolowania płotu.
 Praca zespołowa i interdyscyplinarne podejście umożliwiły skuteczne rozwiązanie wszystkich problemów, z jakimi zespół się zetknął.
