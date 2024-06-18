@@ -57,7 +57,9 @@ Podsumowanie
 Projekt "Problemy płaszczaków" był wyzwaniem, które wymagało zastosowania różnych algorytmów do rozwiązania złożonych problemów. Każdy z członków zespołu wniósł swoją unikalną wiedzę i umiejętności, co pozwoliło na efektywne rozwiązanie napotkanych problemów.
 
 testy::
-prblem 1 Dane wejściowe:
+
+
+problem 1 Dane wejściowe:
 Podaj liczbe punktow orientacyjnych oraz ilosc sciezek:
 11 16
 
