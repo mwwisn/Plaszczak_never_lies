@@ -115,7 +115,9 @@ Podaj po kolei tragarzy ktorzy sie lubia:
 4 7
 
 Dane wyjściowe:
+
 Plaszczaki postawily plot w czasie: 430 minut
+
 Ilosc zuzytych Kijkow: 38
 
 
