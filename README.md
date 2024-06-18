@@ -26,7 +26,7 @@ Opis problemu: Podczas pracy nad projektem, pan Dominik natknął się na proble
 
 Rozwiązanie: Do rozwiązania tego problemu, pan Dominik użył algorytmu Jarvisa, który pozwala na efektywne znalezienie otoczki wypukłej zbioru punktów w czasie O(n log n).
 
-Algorytm Grahama:
+Algorytm Jarvisa:
 Sortowanie: Najpierw punkty są sortowane według kąta, jaki tworzą z punktem startowym (najczęściej o najmniejszej współrzędnej y).
 Budowanie otoczki: Następnie iteracyjnie dodaje się punkty do otoczki, usuwając te, które powodują wklęsłość.
 Problem nr 2
@@ -57,6 +57,65 @@ Podsumowanie
 Projekt "Problemy płaszczaków" był wyzwaniem, które wymagało zastosowania różnych algorytmów do rozwiązania złożonych problemów. Każdy z członków zespołu wniósł swoją unikalną wiedzę i umiejętności, co pozwoliło na efektywne rozwiązanie napotkanych problemów.
 
 testy::
+prblem 1 Dane wejściowe:
+Podaj liczbe punktow orientacyjnych oraz ilosc sciezek:
+11 16
+
+Podaj wspolrzedne kazdego z wierzcholkow:
+7 12
+15 0
+11 9
+1 10
+12 5
+4 5
+9 7
+2 2
+14 11
+5 8
+17 6
+
+Podaj sciezki (punkt 1, puntk 2, dlugosc drogi):
+0 1 3.2
+0 3 2
+0 4 5.4
+1 2 3
+1 7 4
+2 5 1
+3 4 3
+3 5 1.25
+4 8 4
+5 6 3
+5 7 2
+6 8 8
+7 9 5
+7 10 6
+8 10 2.5
+9 10 7
+
+Wybierz punkt orintacyjny w ktorym jest polozona fabryka (od 0 do 10): 7
+
+Podaj liczbe tragarzy:
+10
+
+Podaj ile tragarzy sie wzajemnie lubi:
+9
+
+Podaj po kolei tragarzy ktorzy sie lubia:
+0 5
+0 7
+1 8
+1 9
+2 6
+2 7
+3 7
+3 8
+4 7
+
+Dane wyjściowe:
+Plaszczaki postawily plot w czasie: 430 minut
+Ilosc zuzytych Kijkow: 38
+
+
 problem2![obraz](https://github.com/mwwisn/Plaszczak_never_lies/assets/158228165/2d9f65c6-e8ac-4b1f-a102-abb4be2b069a)
 
 Dominik Kuźmiński rozwiązał problem otoczki wypukłej za pomocą algorytmu Jarvisa.
