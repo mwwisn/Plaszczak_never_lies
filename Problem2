@@ -111,7 +111,7 @@ int main() {
     char litera[26];
     int liczba[26];
     for (int i = 0; i < 26; i++)
-        litera[i] = 65 + i;
+        litera[i] = 97 + i;
     for (int i = 0; i < 26; i++)
         liczba[i] = -1;
 
@@ -146,7 +146,7 @@ int main() {
             }
             i += dlugosc_wzorca;
         } else {
-            i += max(1, j - liczba[opowiesc[i + j] - 65]);
+            i += max(1, j - liczba[opowiesc[i + j] - 97]);
         }
     }
 
