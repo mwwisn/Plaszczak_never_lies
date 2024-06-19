@@ -89,6 +89,7 @@ class GrafDwudzielny {
             }
         }
         bool znalezionoSciezkePowiekszajaca = false;
+        // fragment utworzony przez chat gpt
         while (!kolejka.empty()) {
             int u = kolejka.front();
             kolejka.pop();
@@ -103,6 +104,7 @@ class GrafDwudzielny {
                 }
             }
         }
+        // koniec fragmentu
         return znalezionoSciezkePowiekszajaca;
     }
 
@@ -300,7 +302,7 @@ int main() {
     vector<double> ucieteKijki;
     for(int i = 0; i < dlugosciPomiedzyPunktamiOtoczki.size(); ++i) {
         if(dlugosciPomiedzyPunktamiOtoczki[i] != 0) {
-            ucieteKijki.push_back((-1) * dlugosciPomiedzyPunktamiOtoczki[i]);
+            ucieteKijki.push_back(1 + dlugosciPomiedzyPunktamiOtoczki[i]);
             zuzyteDuzeKije--;
         }
     }
