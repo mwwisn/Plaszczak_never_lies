@@ -147,7 +147,7 @@ Dane wyjściowe:
 
 Plaszczaki postawily plot w czasie: 430 minut
 
-Ilosc zuzytych Kijkow: 38
+Ilosc zuzytych Kijkow: 36
 
 
 problem2![obraz](https://github.com/mwwisn/Plaszczak_never_lies/assets/158228165/2d9f65c6-e8ac-4b1f-a102-abb4be2b069a)
