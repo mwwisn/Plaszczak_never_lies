@@ -153,6 +153,30 @@ Ilosc zuzytych Kijkow: 36
 
 problem2![obraz](https://github.com/mwwisn/Plaszczak_never_lies/assets/158228165/2d9f65c6-e8ac-4b1f-a102-abb4be2b069a)
 
+problem 3
+
+Dane wejściowe: 1 2 0
+2 2 0
+3 3 0
+4 1 0
+5 2000 0
+6 3 0
+7 8 1
+8 30 1
+9 4 0
+10 11 1
+11 3 0
+12 1 0
+
+Dane wyjściowe:
+Minimalna ilosc dla plaszczaka 5: 0
+Minimalna ilosc dla plaszczaka 9: 1
+Minimalna ilosc dla plaszczaka 3: 1
+Minimalna ilosc dla plaszczaka 6: 1
+Minimalna ilosc dla plaszczaka 11: 1
+Minimalna ilosc dla plaszczaka 1: 3
+Minimalna ilosc dla plaszczaka 2: 3
+
 Dominik Kuźmiński rozwiązał problem otoczki wypukłej za pomocą algorytmu Jarvisa, problem najkrótszych ścieżek za pomocą algorytmu Dikstry, problem dobierania w pary za pomocą algorytmu Hopcrofta-Karpa, problem cięcia kijków za pomocą algoytmu pakowania plecaka.
 Michał Wiśniewski zastosował algorytm Boyera-Moore'a do wyszukiwania wzorców oraz algorytm Huffmana do kompresji danych.
 Michał Suszek opracował metodę patrolowania płotu.
