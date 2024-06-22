@@ -73,6 +73,7 @@ Rozwiązanie: Pan Michał skorzystał z algorytmu Huffmana, który służy do ko
 
 Algorytm Huffmana:
 Kompresja: Algorytm generuje prefiksowe kody binarne, które są przypisywane do każdego znaku w taki sposób, aby najczęściej występujące znaki miały najkrótsze kody.
+
 Problem nr 3
 Osoba odpowiedzialna: Michał Suszek
 
